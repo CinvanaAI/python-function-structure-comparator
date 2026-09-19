@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -51,7 +50,13 @@ class ComparatorTests(unittest.TestCase):
     def test_file_comparison_does_not_execute_source(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             marker = Path(tmp) / "marker.txt"
-            source = f"def f():\n    open({str(marker)!r}, 'w').write('bad')\n"
+            # Both importing the module and calling its function would write.
+            # POSIX spelling also exercises literal paths consistently on Windows.
+            literal_path = marker.as_posix()
+            source = (
+                f"open({literal_path!r}, 'w').write('imported')\n"
+                f"def f():\n    open({literal_path!r}, 'w').write('called')\n"
+            )
             a = Path(tmp) / "a.py"
             b = Path(tmp) / "b.py"
             a.write_text(source, encoding="utf-8")
@@ -59,7 +64,12 @@ class ComparatorTests(unittest.TestCase):
             result = compare_file_to_file(a, b)
             self.assertFalse(marker.exists())
             self.assertEqual(result["file_a"], "a.py")
-            self.assertNotIn(str(Path(tmp)), json.dumps(result))
+            self.assertEqual(result["file_b"], "b.py")
+            # Input-location metadata uses basenames; literals in source must
+            # remain available to the structural comparison, not be redacted.
+            features = result["comparison"]["function_specific_comparison"]
+            self.assertIn(literal_path, features["features_a"]["string_literals"])
+            self.assertIn(literal_path, features["features_b"]["string_literals"])
 
 
 if __name__ == "__main__":
