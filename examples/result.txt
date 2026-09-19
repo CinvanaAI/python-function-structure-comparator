@@ -1,0 +1,129 @@
+{
+  "mode": "file_to_file",
+  "file_a": "before.py",
+  "file_b": "after.py",
+  "comparison": {
+    "general_object_comparison": {
+      "identity": {
+        "same_object_identity": false,
+        "same_type": true,
+        "type_a": "builtins.str",
+        "type_b": "builtins.str"
+      },
+      "exactness": {
+        "python_equality_operator": false,
+        "repr_exact_match": false,
+        "json_exact_match": false,
+        "json_hash_a": "e1428c62183596ba10d7823e3a78440f86692b2312e79786370f0e12ac4b84a9",
+        "json_hash_b": "d68c9d251bf2f1a177c72951e0b32128f8ba5bdb3f760d815857c17fa0931584"
+      },
+      "similarity": {
+        "repr_sequence_similarity": 0.6824644549763034,
+        "json_sequence_similarity": 0.676056338028169,
+        "json_line_similarity": 0.0,
+        "json_token_jaccard_similarity": 0.6956521739130435,
+        "json_token_multiset_overlap": 0.5869565217391305
+      },
+      "python_source_comparison": {
+        "source_available_a": true,
+        "source_available_b": true,
+        "source_exact_match": false,
+        "source_normalized_text_similarity": 0.6702127659574468,
+        "source_line_similarity": 0.0,
+        "source_token_jaccard_similarity": 0.6190476190476191,
+        "source_token_multiset_overlap": 0.5833333333333334,
+        "ast_normalized_exact_match": false,
+        "ast_normalized_similarity": 0.6767676767676768,
+        "ast_dump_exact_match": false,
+        "ast_dump_similarity": 0.3274336283185841
+      },
+      "previews": {
+        "repr_a": "'def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n'",
+        "repr_b": "'def normalize_name(value: str, *, empty: str = \"unknown\") -> str:\\n    cleaned = value.strip().lower()\\n    return cleaned or empty\\n'",
+        "json_a": "\"def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n\"",
+        "json_b": "\"def normalize_name(value: str, *, empty: str = \\\"unknown\\\") -> str:\\n    cleaned = value.strip().lower()\\n    return cleaned or empty\\n\""
+      }
+    },
+    "function_specific_comparison": {
+      "function_like_comparison_possible": true,
+      "features_a": {
+        "function_found": true,
+        "name": "normalize_name",
+        "signature": {
+          "name": "normalize_name",
+          "is_async": false,
+          "positional_only": [],
+          "positional_or_keyword": [
+            "value"
+          ],
+          "vararg": null,
+          "keyword_only": [],
+          "kwarg": null,
+          "arg_count_total": 1,
+          "decorator_count": 0
+        },
+        "body_normalized": "return value.strip().lower()",
+        "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+        "return_count": 1,
+        "yield_count": 0,
+        "call_names": [],
+        "attribute_call_names": [
+          "lower",
+          "strip"
+        ],
+        "raises": 0,
+        "branch_count": 0,
+        "loop_count": 0,
+        "comprehension_count": 0,
+        "string_literals": []
+      },
+      "features_b": {
+        "function_found": true,
+        "name": "normalize_name",
+        "signature": {
+          "name": "normalize_name",
+          "is_async": false,
+          "positional_only": [],
+          "positional_or_keyword": [
+            "value"
+          ],
+          "vararg": null,
+          "keyword_only": [
+            "empty"
+          ],
+          "kwarg": null,
+          "arg_count_total": 2,
+          "decorator_count": 0
+        },
+        "body_normalized": "cleaned = value.strip().lower()\nreturn cleaned or empty",
+        "body_ast_dump": "Module(body=[Assign(targets=[Name(id='cleaned', ctx=Store())], value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load()))), Return(value=BoolOp(op=Or(), values=[Name(id='cleaned', ctx=Load()), Name(id='empty', ctx=Load())]))])",
+        "return_count": 1,
+        "yield_count": 0,
+        "call_names": [],
+        "attribute_call_names": [
+          "lower",
+          "strip"
+        ],
+        "raises": 0,
+        "branch_count": 0,
+        "loop_count": 0,
+        "comprehension_count": 0,
+        "string_literals": [
+          "unknown"
+        ]
+      },
+      "name_exact_match": true,
+      "signature_exact_match": false,
+      "signature_similarity": 0.47901234567901235,
+      "body_normalized_exact_match": false,
+      "body_normalized_similarity": 0.5783132530120482,
+      "body_ast_exact_match": false,
+      "body_ast_similarity": 0.16842105263157894,
+      "call_name_jaccard_similarity": 1.0,
+      "attribute_call_name_jaccard_similarity": 1.0,
+      "string_literal_jaccard_similarity": 0.0,
+      "structure_similarity_summary": 0.6451493302645279,
+      "likely_relationship": "possible_variant"
+    }
+  }
+}
