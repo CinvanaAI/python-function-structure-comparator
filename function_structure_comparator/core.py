@@ -4,6 +4,7 @@ import hashlib
 import inspect
 import json
 import re
+import textwrap
 from collections import Counter
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
@@ -182,7 +183,7 @@ def parse_function_blocks(source_text: str) -> list[str]:
             if hasattr(node, "lineno") and hasattr(node, "end_lineno"):
                 start = node.lineno - 1
                 end = node.end_lineno
-                block = "\n".join(lines[start:end])
+                block = textwrap.dedent("\n".join(lines[start:end]))
                 blocks.append(block)
 
     return blocks

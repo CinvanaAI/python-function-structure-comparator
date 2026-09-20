@@ -1,0 +1,519 @@
+{
+  "mode": "candidate_vs_inventory",
+  "candidate_file": "before.py",
+  "inventory_file": "inventory.py",
+  "comparison": {
+    "candidate_name": "normalize_name",
+    "candidate_source": "def normalize_name(value: str) -> str:\n    return value.strip().lower()\n",
+    "inventory_size": 3,
+    "best_match": {
+      "candidate_name": "normalize_name",
+      "inventory_index": "1",
+      "inventory_name": "normalize_name",
+      "overall_similarity": 0.9746376811594203,
+      "likely_relationship": "exact_or_structural_duplicate",
+      "result": {
+        "general_object_comparison": {
+          "identity": {
+            "same_object_identity": false,
+            "same_type": true,
+            "type_a": "builtins.str",
+            "type_b": "builtins.str"
+          },
+          "exactness": {
+            "python_equality_operator": false,
+            "repr_exact_match": false,
+            "json_exact_match": false,
+            "json_hash_a": "e1428c62183596ba10d7823e3a78440f86692b2312e79786370f0e12ac4b84a9",
+            "json_hash_b": "5e66da0b7cafd2f70fb1f80dab6ed21c05901a7b155e4101ced6b2b6ea0ac2f9"
+          },
+          "similarity": {
+            "repr_sequence_similarity": 0.8985507246376812,
+            "json_sequence_similarity": 0.8985507246376812,
+            "json_line_similarity": 0.0,
+            "json_token_jaccard_similarity": 0.8125,
+            "json_token_multiset_overlap": 0.7407407407407407
+          },
+          "python_source_comparison": {
+            "source_available_a": true,
+            "source_available_b": true,
+            "source_exact_match": false,
+            "source_normalized_text_similarity": 0.9016393442622951,
+            "source_line_similarity": 0.5,
+            "source_token_jaccard_similarity": 0.7692307692307693,
+            "source_token_multiset_overlap": 0.7619047619047619,
+            "ast_normalized_exact_match": false,
+            "ast_normalized_similarity": 0.9076923076923077,
+            "ast_dump_exact_match": false,
+            "ast_dump_similarity": 0.8691099476439791
+          },
+          "previews": {
+            "repr_a": "'def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n'",
+            "repr_b": "'def normalize_name(value):\\n    return value.strip().lower()'",
+            "json_a": "\"def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n\"",
+            "json_b": "\"def normalize_name(value):\\n    return value.strip().lower()\""
+          }
+        },
+        "function_specific_comparison": {
+          "function_like_comparison_possible": true,
+          "features_a": {
+            "function_found": true,
+            "name": "normalize_name",
+            "signature": {
+              "name": "normalize_name",
+              "is_async": false,
+              "positional_only": [],
+              "positional_or_keyword": [
+                "value"
+              ],
+              "vararg": null,
+              "keyword_only": [],
+              "kwarg": null,
+              "arg_count_total": 1,
+              "decorator_count": 0
+            },
+            "body_normalized": "return value.strip().lower()",
+            "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+            "return_count": 1,
+            "yield_count": 0,
+            "call_names": [],
+            "attribute_call_names": [
+              "lower",
+              "strip"
+            ],
+            "raises": 0,
+            "branch_count": 0,
+            "loop_count": 0,
+            "comprehension_count": 0,
+            "string_literals": []
+          },
+          "features_b": {
+            "function_found": true,
+            "name": "normalize_name",
+            "signature": {
+              "name": "normalize_name",
+              "is_async": false,
+              "positional_only": [],
+              "positional_or_keyword": [
+                "value"
+              ],
+              "vararg": null,
+              "keyword_only": [],
+              "kwarg": null,
+              "arg_count_total": 1,
+              "decorator_count": 0
+            },
+            "body_normalized": "return value.strip().lower()",
+            "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+            "return_count": 1,
+            "yield_count": 0,
+            "call_names": [],
+            "attribute_call_names": [
+              "lower",
+              "strip"
+            ],
+            "raises": 0,
+            "branch_count": 0,
+            "loop_count": 0,
+            "comprehension_count": 0,
+            "string_literals": []
+          },
+          "name_exact_match": true,
+          "signature_exact_match": true,
+          "signature_similarity": 1.0,
+          "body_normalized_exact_match": true,
+          "body_normalized_similarity": 1.0,
+          "body_ast_exact_match": true,
+          "body_ast_similarity": 1.0,
+          "call_name_jaccard_similarity": 1.0,
+          "attribute_call_name_jaccard_similarity": 1.0,
+          "string_literal_jaccard_similarity": 1.0,
+          "structure_similarity_summary": 1.0,
+          "likely_relationship": "exact_or_structural_duplicate"
+        }
+      }
+    },
+    "all_comparisons": [
+      {
+        "candidate_name": "normalize_name",
+        "inventory_index": "1",
+        "inventory_name": "normalize_name",
+        "overall_similarity": 0.9746376811594203,
+        "likely_relationship": "exact_or_structural_duplicate",
+        "result": {
+          "general_object_comparison": {
+            "identity": {
+              "same_object_identity": false,
+              "same_type": true,
+              "type_a": "builtins.str",
+              "type_b": "builtins.str"
+            },
+            "exactness": {
+              "python_equality_operator": false,
+              "repr_exact_match": false,
+              "json_exact_match": false,
+              "json_hash_a": "e1428c62183596ba10d7823e3a78440f86692b2312e79786370f0e12ac4b84a9",
+              "json_hash_b": "5e66da0b7cafd2f70fb1f80dab6ed21c05901a7b155e4101ced6b2b6ea0ac2f9"
+            },
+            "similarity": {
+              "repr_sequence_similarity": 0.8985507246376812,
+              "json_sequence_similarity": 0.8985507246376812,
+              "json_line_similarity": 0.0,
+              "json_token_jaccard_similarity": 0.8125,
+              "json_token_multiset_overlap": 0.7407407407407407
+            },
+            "python_source_comparison": {
+              "source_available_a": true,
+              "source_available_b": true,
+              "source_exact_match": false,
+              "source_normalized_text_similarity": 0.9016393442622951,
+              "source_line_similarity": 0.5,
+              "source_token_jaccard_similarity": 0.7692307692307693,
+              "source_token_multiset_overlap": 0.7619047619047619,
+              "ast_normalized_exact_match": false,
+              "ast_normalized_similarity": 0.9076923076923077,
+              "ast_dump_exact_match": false,
+              "ast_dump_similarity": 0.8691099476439791
+            },
+            "previews": {
+              "repr_a": "'def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n'",
+              "repr_b": "'def normalize_name(value):\\n    return value.strip().lower()'",
+              "json_a": "\"def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n\"",
+              "json_b": "\"def normalize_name(value):\\n    return value.strip().lower()\""
+            }
+          },
+          "function_specific_comparison": {
+            "function_like_comparison_possible": true,
+            "features_a": {
+              "function_found": true,
+              "name": "normalize_name",
+              "signature": {
+                "name": "normalize_name",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "value"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 1,
+                "decorator_count": 0
+              },
+              "body_normalized": "return value.strip().lower()",
+              "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [
+                "lower",
+                "strip"
+              ],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "features_b": {
+              "function_found": true,
+              "name": "normalize_name",
+              "signature": {
+                "name": "normalize_name",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "value"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 1,
+                "decorator_count": 0
+              },
+              "body_normalized": "return value.strip().lower()",
+              "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [
+                "lower",
+                "strip"
+              ],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "name_exact_match": true,
+            "signature_exact_match": true,
+            "signature_similarity": 1.0,
+            "body_normalized_exact_match": true,
+            "body_normalized_similarity": 1.0,
+            "body_ast_exact_match": true,
+            "body_ast_similarity": 1.0,
+            "call_name_jaccard_similarity": 1.0,
+            "attribute_call_name_jaccard_similarity": 1.0,
+            "string_literal_jaccard_similarity": 1.0,
+            "structure_similarity_summary": 1.0,
+            "likely_relationship": "exact_or_structural_duplicate"
+          }
+        }
+      },
+      {
+        "candidate_name": "normalize_name",
+        "inventory_index": "2",
+        "inventory_name": "tidy",
+        "overall_similarity": 0.8485454463841213,
+        "likely_relationship": "possible_variant",
+        "result": {
+          "general_object_comparison": {
+            "identity": {
+              "same_object_identity": false,
+              "same_type": true,
+              "type_a": "builtins.str",
+              "type_b": "builtins.str"
+            },
+            "exactness": {
+              "python_equality_operator": false,
+              "repr_exact_match": false,
+              "json_exact_match": false,
+              "json_hash_a": "e1428c62183596ba10d7823e3a78440f86692b2312e79786370f0e12ac4b84a9",
+              "json_hash_b": "bd418a957a5505a4dfc46f30f01d6a0d493bf02fa84323589bc0ba2d0a38030e"
+            },
+            "similarity": {
+              "repr_sequence_similarity": 0.6212121212121212,
+              "json_sequence_similarity": 0.6212121212121212,
+              "json_line_similarity": 0.0,
+              "json_token_jaccard_similarity": 0.55,
+              "json_token_multiset_overlap": 0.53125
+            },
+            "python_source_comparison": {
+              "source_available_a": true,
+              "source_available_b": true,
+              "source_exact_match": false,
+              "source_normalized_text_similarity": 0.5862068965517241,
+              "source_line_similarity": 0.0,
+              "source_token_jaccard_similarity": 0.47058823529411764,
+              "source_token_multiset_overlap": 0.5,
+              "ast_normalized_exact_match": false,
+              "ast_normalized_similarity": 0.6129032258064516,
+              "ast_dump_exact_match": false,
+              "ast_dump_similarity": 0.7335640138408305
+            },
+            "previews": {
+              "repr_a": "'def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n'",
+              "repr_b": "'def tidy(self, text):\\n    return text.strip().lower()'",
+              "json_a": "\"def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n\"",
+              "json_b": "\"def tidy(self, text):\\n    return text.strip().lower()\""
+            }
+          },
+          "function_specific_comparison": {
+            "function_like_comparison_possible": true,
+            "features_a": {
+              "function_found": true,
+              "name": "normalize_name",
+              "signature": {
+                "name": "normalize_name",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "value"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 1,
+                "decorator_count": 0
+              },
+              "body_normalized": "return value.strip().lower()",
+              "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [
+                "lower",
+                "strip"
+              ],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "features_b": {
+              "function_found": true,
+              "name": "tidy",
+              "signature": {
+                "name": "tidy",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "self",
+                  "text"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 2,
+                "decorator_count": 0
+              },
+              "body_normalized": "return text.strip().lower()",
+              "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='text', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [
+                "lower",
+                "strip"
+              ],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "name_exact_match": false,
+            "signature_exact_match": false,
+            "signature_similarity": 0.9215189873417722,
+            "body_normalized_exact_match": false,
+            "body_normalized_similarity": 0.8727272727272727,
+            "body_ast_exact_match": false,
+            "body_ast_similarity": 0.9787234042553191,
+            "call_name_jaccard_similarity": 1.0,
+            "attribute_call_name_jaccard_similarity": 1.0,
+            "string_literal_jaccard_similarity": 1.0,
+            "structure_similarity_summary": 0.9545939328648728,
+            "likely_relationship": "possible_variant"
+          }
+        }
+      },
+      {
+        "candidate_name": "normalize_name",
+        "inventory_index": "0",
+        "inventory_name": "add_tax",
+        "overall_similarity": 0.5683654816940327,
+        "likely_relationship": "likely_different",
+        "result": {
+          "general_object_comparison": {
+            "identity": {
+              "same_object_identity": false,
+              "same_type": true,
+              "type_a": "builtins.str",
+              "type_b": "builtins.str"
+            },
+            "exactness": {
+              "python_equality_operator": false,
+              "repr_exact_match": false,
+              "json_exact_match": false,
+              "json_hash_a": "e1428c62183596ba10d7823e3a78440f86692b2312e79786370f0e12ac4b84a9",
+              "json_hash_b": "97857a70d0be5669a30508b4c433ecf33442c7012c33daa790109644471e0d93"
+            },
+            "similarity": {
+              "repr_sequence_similarity": 0.4411764705882353,
+              "json_sequence_similarity": 0.4411764705882353,
+              "json_line_similarity": 0.0,
+              "json_token_jaccard_similarity": 0.34782608695652173,
+              "json_token_multiset_overlap": 0.3055555555555556
+            },
+            "python_source_comparison": {
+              "source_available_a": true,
+              "source_available_b": true,
+              "source_exact_match": false,
+              "source_normalized_text_similarity": 0.38333333333333336,
+              "source_line_similarity": 0.0,
+              "source_token_jaccard_similarity": 0.25,
+              "source_token_multiset_overlap": 0.23333333333333334,
+              "ast_normalized_exact_match": false,
+              "ast_normalized_similarity": 0.421875,
+              "ast_dump_exact_match": false,
+              "ast_dump_similarity": 0.3711340206185567
+            },
+            "previews": {
+              "repr_a": "'def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n'",
+              "repr_b": "'def add_tax(amount, rate):\\n    return amount * (1 + rate)'",
+              "json_a": "\"def normalize_name(value: str) -> str:\\n    return value.strip().lower()\\n\"",
+              "json_b": "\"def add_tax(amount, rate):\\n    return amount * (1 + rate)\""
+            }
+          },
+          "function_specific_comparison": {
+            "function_like_comparison_possible": true,
+            "features_a": {
+              "function_found": true,
+              "name": "normalize_name",
+              "signature": {
+                "name": "normalize_name",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "value"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 1,
+                "decorator_count": 0
+              },
+              "body_normalized": "return value.strip().lower()",
+              "body_ast_dump": "Module(body=[Return(value=Call(func=Attribute(value=Call(func=Attribute(value=Name(id='value', ctx=Load()), attr='strip', ctx=Load())), attr='lower', ctx=Load())))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [
+                "lower",
+                "strip"
+              ],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "features_b": {
+              "function_found": true,
+              "name": "add_tax",
+              "signature": {
+                "name": "add_tax",
+                "is_async": false,
+                "positional_only": [],
+                "positional_or_keyword": [
+                  "amount",
+                  "rate"
+                ],
+                "vararg": null,
+                "keyword_only": [],
+                "kwarg": null,
+                "arg_count_total": 2,
+                "decorator_count": 0
+              },
+              "body_normalized": "return amount * (1 + rate)",
+              "body_ast_dump": "Module(body=[Return(value=BinOp(left=Name(id='amount', ctx=Load()), op=Mult(), right=BinOp(left=Constant(value=1), op=Add(), right=Name(id='rate', ctx=Load()))))])",
+              "return_count": 1,
+              "yield_count": 0,
+              "call_names": [],
+              "attribute_call_names": [],
+              "raises": 0,
+              "branch_count": 0,
+              "loop_count": 0,
+              "comprehension_count": 0,
+              "string_literals": []
+            },
+            "name_exact_match": false,
+            "signature_exact_match": false,
+            "signature_similarity": 0.87,
+            "body_normalized_exact_match": false,
+            "body_normalized_similarity": 0.4074074074074074,
+            "body_ast_exact_match": false,
+            "body_ast_similarity": 0.5548780487804879,
+            "call_name_jaccard_similarity": 1.0,
+            "attribute_call_name_jaccard_similarity": 0.0,
+            "string_literal_jaccard_similarity": 1.0,
+            "structure_similarity_summary": 0.566457091237579,
+            "likely_relationship": "likely_different"
+          }
+        }
+      }
+    ]
+  }
+}

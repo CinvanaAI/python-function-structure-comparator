@@ -1,7 +1,5 @@
 # Python Function Structure Comparator
 
-Look for related Python functions beyond a plain text diff.
-
 Compare Python functions or rank likely variants using syntax, signature, calls, and literals without importing or executing target code.
 
 ## See it work
@@ -31,4 +29,4 @@ Implementation: [function_structure_comparator/core.py](function_structure_compa
 
 Structural similarity does not prove equivalence, correctness, authorship, or plagiarism. Imports and function bodies are parsed, not run. Runtime values and side effects are outside the analysis.
 
-[Reference and CLI details](docs/REFERENCE.md) | [Origin](ORIGIN.md) | [MIT license](LICENSE.md)
+[Worked inventory ranking and CLI details](docs/REFERENCE.md) | [Origin](ORIGIN.md) | [MIT license](LICENSE.md)

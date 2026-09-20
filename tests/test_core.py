@@ -10,6 +10,7 @@ from function_structure_comparator.core import (
     compare_functions,
     load_inventory_functions_from_python_file,
     parse_function_blocks,
+    parse_function_name,
 )
 
 
@@ -34,6 +35,15 @@ class ComparatorTests(unittest.TestCase):
         after = "def normalize_name(value: str, *, empty='unknown') -> str:\n cleaned=value.strip().lower()\n return cleaned or empty"
         result = compare_functions(before, after)
         self.assertEqual(result["likely_relationship"], "possible_variant")
+
+    def test_nested_functions_and_methods_keep_parseable_names(self) -> None:
+        source = "class Worker:\n    def method(self, value):\n        def inner(item):\n            return item.strip()\n        return inner(value)\n"
+        blocks = parse_function_blocks(source)
+        self.assertEqual([parse_function_name(block) for block in blocks], ["method", "inner"])
+        for block in blocks:
+            result = compare_functions(block, block)
+            self.assertTrue(result["body_ast_exact_match"])
+            self.assertTrue(result["signature_exact_match"])
 
     def test_extracts_multiple_function_blocks(self) -> None:
         blocks = parse_function_blocks("def a():\n pass\n\ndef b():\n pass\n")
